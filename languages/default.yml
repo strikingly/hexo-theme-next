@@ -10,6 +10,8 @@ menu:
   tags: Tags
   about: About
   search: Search
+  fe: FE/前端
+  strikingly: Strikingly
 
 sidebar:
   overview: Overview
@@ -18,6 +20,7 @@ sidebar:
 post:
   posted: Posted on
   in: In
+  by: By
   read_more: Read more
   untitled: Untitled
   toc_empty: This post does not have a Table Of Contents
