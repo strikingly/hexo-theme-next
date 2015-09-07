@@ -1,8 +1,22 @@
 // Custom styles.
 
+// Vanilla font for teng's blog post.
+@font-face {
+    font-family: 'vanilla';
+    src: url('../fonts/vanilla/vanilla-webfont.eot');
+    src: url('../fonts/vanilla/vanilla-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/vanilla/vanilla-webfont.woff') format('woff'),
+         url('../fonts/vanilla/vanilla-webfont.ttf') format('truetype'),
+         url('../fonts/vanilla/vanilla-webfont.svg#vanillaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 $purple = #6D568F
 $blue = #29AAD8
 $gold = #fc0
+$lightgray = #e2eaed
+$gray = #789
 
 body
   letter-spacing -0.5px
@@ -59,7 +73,11 @@ a
 .theme-info, .powered-by::after
   display none
 
+
+
 // POSTS
+h1
+  font-size 30px
 .posts-expand 
   .post-title
     font-size 36px
@@ -69,7 +87,7 @@ a
     &:hover {color: $blue}
 
 .post-more-link a
-  border: 1px solid #789
+  border: 1px solid $gray
   padding: 4px 12px
   border-radius: 3px
 
@@ -77,10 +95,29 @@ a
     color $blue
     border-color $blue
 
+.post hr, .posts-expand hr
+  margin: 50px 0
+  background: $gray * 0.5 + 0.5 * #fff
+
+
 // CODE
 .post pre, .post .highlight 
   letter-spacing 0
   font-size 14px
+
+// inline code
+.post code, .posts-expand code
+  font-size 15px
+  padding 0.1em 0.3em
+  border-radius 3px
+  background $lightgray
+
+.s-html-example
+  padding 30px
+  background #eee
+  margin-bottom 25px
+
+
 
 // MEDIA
 +tablet()
@@ -90,10 +127,14 @@ a
     width 700px
 
 @media (max-width: 767px)
+  h1
+    font-size 26px
   body
     font-size 15px
   .posts-expand .post-title
     font-size 32px
+  hr
+    margin: 30px 0
 
 @media (min-width: 1200px)
   .site-meta
@@ -102,10 +143,13 @@ a
     margin-right -90px
 
 
+
 // ARTICLE LIST
 .posts-expand .post
   border-bottom: 1px solid #abc;
   padding-bottom 80px
+
+
 
 // SIDEBAR
 .sidebar
