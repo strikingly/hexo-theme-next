@@ -25,7 +25,13 @@
       {% endif %}
 
       <div class="post-meta">
+        {% if post.author %}
+          <span class="post-author">
+            {{post.author}}
+          </span>
+        {% endif %}
         <span class="post-time">
+          &nbsp; &bullet; &nbsp;
           {{ __('post.posted') }}
           <time itemprop="dateCreated" datetime="{{ moment(post.date).format() }}" content="{{ date(post.date, config.date_format) }}">
             {{ date(post.date, config.date_format) }}
@@ -68,6 +74,7 @@
           </span>
           {% endif %}
         {% endif %}
+
       </div>
     </header>
 
